@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
+  Z = \PYG{k}{\PYGZbs{}int}\PYG{n+nb}{\PYGZca{}}0\PYG{n+nb}{\PYGZus{}\PYGZob{}}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}}xdx\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}cdot} \PYG{k}{\PYGZbs{}frac}\PYG{n+nb}{\PYGZob{}}5\PYG{n+nb}{\PYGZcb{}\PYGZob{}}3\PYG{n+nb}{\PYGZcb{}}y
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

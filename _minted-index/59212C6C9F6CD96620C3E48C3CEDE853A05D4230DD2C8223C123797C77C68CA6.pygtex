@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}draw} [\PYGZlt{}\PYGZhy{}\PYGZgt{}] (0,2) \PYGZhy{}\PYGZhy{} (0,0) \PYGZhy{}\PYGZhy{} (4,0);
+\PYG{k}{\PYGZbs{}draw} [thick] (0,1.5) \PYGZhy{}\PYGZhy{} (3,0);
+\PYG{k}{\PYGZbs{}draw} [ultra thick] (0,0) \PYGZhy{}\PYGZhy{} (2,2);
+\PYG{k}{\PYGZbs{}draw} [help lines] (1,0) \PYGZhy{}\PYGZhy{} (1,1) \PYGZhy{}\PYGZhy{} (0,1);
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

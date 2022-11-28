@@ -1,0 +1,401 @@
+#+TITLE: Introduction to LaTeX
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+MACRO: html (eval (if (not (eq org-export-current-backend 'html)) ":noexport:" "" ))
+#+options: num:nil
+#+HTML_HEAD_EXTRA:   <script src="https://editor.codecogs.com/assets/js/eqneditor.api.min.js"></script>
+#+HTML_HEAD_EXTRA:   <link rel="stylesheet" href="https://editor.codecogs.com/assets/css/eqneditor.css"/>
+#+HTML_HEAD_EXTRA: <script> window.onload = function () { toolbar = new EqEditor.Toolbar('toolbar'); textarea = new EqEditor.TextArea('latexInput'); textarea.addToolbar(toolbar, true); mainOutput = new EqEditor.Output('output'); textarea.addOutput(mainOutput); textarea.addHistoryMenu(new EqEditor.History('history'));}</script>
+#+cite_export: csl apa.csl
+#+latex_header: \usepackage{minted}
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="style.css">
+#+EXPORT_FILE_NAME: index.html
+
+* Introduction
+LaTeX is a "document preparation system" [cite:@LaTeXDocumentPreparation]. It
+is a program that takes a /plain text/[fn:plain_text] file written in a special
+syntax and creates a document, commonly in the PDF format. Rather than display
+the formatting in the editor, a la Microsoft Word [cite:@MicrosoftWordWord], LaTeX uses a set of codes or
+"commands" to determine how the final document will look. Italicized text for
+example, would look =\emph{like this}= in the text file, but /like this/ in the
+final document. This document aims to provide a brief introduction in the use of
+LaTeX, covering everything from general syntax to document classes.
+
+[fn:plain_text] "Plain text" refers to text without formatting. Font, margin, and spacing information are all absent. Files containing plain text often end with the =.txt= extension.
+** Prerequisite Knowledge
+The following skills are required to read this document successfully:
++ English literacy, there will be some jargon
++ Computer skills, basic terminology[fn:basic_terms]
++ Ability to follow detailed instructions
++ Ability to use a /text editor/[fn:text_editor], instructions will be given using
+  [[https://code.visualstudio.com/][Visual Studio Code]] (VScode)[cite:@VisualStudioCodea]
++ If using Linux, basic terminal knowledge is assumed[fn:basic_terminal]
+
+[fn:text_editor]
+A [[https://en.wikipedia.org/wiki/Text_editor][text editor]] is a piece of software that edits plain text. See
+the extended definition [[Text Editor][here]].
+[fn:basic_terms]
+Basic terminology includes terms like "window", "software", "webpage". More
+complicated terms will either be defined, or an appropriate [[https://en.wikipedia.org/wiki/Hyperlink][hyperlink]] will be used.
+[fn:basic_terminal]
+Basic terminal knowledge includes moving directories(=cd= command in Unix operating systems) and running commands.
+** Uses
+In the case of Big Publishing CO., we use it for publishing. Authors submit
+their work in an arbitrary format, which might include handwritten equations,
+non-standardized fonts, etc. LaTeX provides a way to automate and standardize
+the formatting of these documents. It is also frequently used by document
+creators to export to multiple formats without extra work.
+
+* A Basic Example
+On first glance, LaTeX looks a bit like a [programming language]. For the most
+part, LaTeX would *not* be considered a programming language. It is more like
+HTML [cite:@HTMLStandard] or MediaWiki markup [cite:@HelpFormattingMediaWiki].
+These languages are generally considered [[https://en.wikipedia.org/wiki/Markup_language][Markup languages]]. Markup languages are
+much easier to learn in comparison to programming languages. Here is a very short
+example document in LaTeX:
+#+begin_src latex :file hello_world.png :exports both :eval never-export
+\documentclass{article}
+\begin{document}
+Hello, World! I just wrote my first \LaTeX{} document!
+\end{document}
+#+end_src
+#+attr_latex: :height 1cm
+#+RESULTS:
+[[file:hello_world.png]]
+
+This is the standard format for code in this document. Expect output of code
+blocks directly after code.
+
+[fn:latex_commands]
+Commands can be pretty advanced and are why LaTeX can
+sometimes be considered a programming language. Users don't create them very
+often.
+
+* Getting Started
+There are many different ways to use LaTeX. LaTeX is a program, but it is also a
+language. LaTeX has been at least partially implemented in many different pieces of
+software, particularly the math typesetting functionality, which will be
+covered [[Math Equations][later]].
+
+** Installation
+In this section, we will cover an overview of the installation of
+the LaTeX /program/ for every major platform.
+*** Overleaf
+One of the easiest methods to get
+started is to use [[https://www.overleaf.com/][Overleaf]] [cite:@OverleafOnlineLaTeX]. Overleaf is an online
+system that removes much of the hassle of creating documents in LaTeX.
+Overleaf's online naturre For
+professional use, Overleaf is not recommended as data privacy is not assured.
+This is a problem with all external web based tools. It
+is great as a learning tool and for personal use however.
+*** Windows
+The official recommended  way to install LaTeX in Windows is to use the MiKTeX
+[cite:@MikTex2022] distribution. Follow the [[https://miktex.org/howto/install-miktex][official instructions]] to install. Make
+sure the correct [[https://miktex.org/kb/prerequisites-2-9][version of Windows]] is installed. Once installed, the program
+[[https://strawberryperl.com/][Straberry Perl]] [cite:@StrawberryPerlWindows] must be installed. Assuming that
+VScode is installed, the [[https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop][LaTeX Workshop]] extension must be installed through the
+built in marketplace. LaTeX can now be run through VScode if so desired.
+*** MacOS
+The official recommended way to install LaTeX in MacOS is to use the [[https://tug.org/mactex/index.html][MacTeX]]
+distribution[cite:@MacTeXTeXUsers]. Follow the
+[[https://tug.org/mactex/mactex-download.html][official instructions]] to install. Assuming that VScode is installed, the [[https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop][LaTeX
+Workshop]] extension must be installed through the built in marketplace. LaTeX
+can now be run through VScode if so desired.
+*** Linux (Ubuntu)
+For Ubuntu linux, simply running:
+#+begin_src bash
+sudo apt update
+sudo apt install texlive-full
+sudo apt install latexmk
+#+end_src
+will install the required packages. Assuming that VScode is installed, the [[https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop][LaTeX
+Workshop]] extension must be installed through the built in marketplace. LaTeX
+can now be run through VScode if so desired.
+** First Document
+Copy the code from [[A Basic Example][above]] into a file called `mydocument.tex` using a text editor.
+If using VScode, =ctrl= + =alt= + =b= or =Build LaTeX= in the command palette should
+build the document so that it looks like the output above.
+
+If not using VScode, some terminal knowledge is required. Open a terminal in the
+directory where =mydocument.tex= is located and run:
+#+begin_src bash
+latexmk mydocument.tex
+#+end_src
+A document called =mydocument.pdf= should now appear in the same directory as =mydocument.tex=.
+
+[[https://mirrors.rit.edu/CTAN/support/latexmk/latexmk.pdf][Latexmk]] is a special command that automates much of the normal build process
+[cite:@CTANPackageLatexmk].
+* Basic Syntax
+Taking our basic example again:
+#+begin_src latex :file hello_world.png :exports both :eval never-export
+\documentclass{article}
+\begin{document}
+Hello, World! I just wrote my first \LaTeX{} document!
+\end{document}
+#+end_src
+LaTeX uses the =\= character to demarcate /Commands/[fn:latex_commands] from the
+rest of the text. ={}= characters are used to provide arguments to these commands.
+
+The =\begin= and =\end= commands are special, they define an
+/[[LaTeX Environments][environment]]/. There are many different kinds of environment, but all documents
+should contain a =document= environment. The text before the =document= environment
+forms the "header" of the document. This is where important meta information,
+such as font and margins, goes. In our example, the only header information is
+the [[Document Class][document class]] which provides formatting defaults such as font, margin, etc.
+In this case, the document class is =article= which is commonly used as a starting
+point for more complicated formatting.
+
+A slightly more complicated example:
+#+begin_src latex :file complicated_example.png :exports both :eval never-export :headers \usepackage{verse}
+\documentclass{article}
+\usepackage{verse}
+\begin{document}
+A numbered list can be created using the enumerate environment:
+\begin{enumerate}
+        \item The first item
+        \item The second item
+        \item The third item
+\end{enumerate}
+An unordered list can be created using the itemize environment:
+\begin{itemize}
+        \item The first item
+        \item The second item
+        \item The third item
+\end{itemize}
+If you want to write poetry, the verse environment can be used:
+
+\poemtitle{Sonnet 1, Shakespeare}
+\settowidth{\versewidth}{Feed’st thy light’s flame with self-substantial fuel,}
+\begin{verse}[\versewidth]
+  From fairest creatures we desire increase, \\
+That thereby beauty’s rose might never die, \\
+But, as the riper should by time decease, \\
+His tender heir might bear his memory. \\
+But thou, contracted to thine own bright eyes, \\
+Feed’st thy light’s flame with self-substantial fuel, \\
+Making a famine where abundance lies, \\
+Thyself thy foe, to thy sweet self too cruel. \\
+Thou that art now the world’s fresh ornament \\
+And only herald to the gaudy spring \\
+Within thine own bud buriest thy content \\
+And, tender churl, mak’st waste in niggarding. \\
+Pity the world, or else this glutton be— \\
+To eat the world’s due, by the grave and thee. \\
+\end{verse}
+
+\end{document}
+#+end_src
+
+#+RESULTS:
+[[file:complicated_example.png]]
+
+This example showcases common environments and how they are used. It also shows
+the use of a package, =verse=. Packages provide commands and environments for a
+specific purpose. If installed correctly, all packages for LaTeX should already
+be installed.
+
+In the verse environment the =\\= code is used to indicate a line break. The other commands
+relating to poetry are documented by the [[https://ctan.math.washington.edu/tex-archive/macros/latex/contrib/verse/verse.pdf][verse package]] [cite:@CTANPackageVerse].
+
+
+* Math Equations
+
+LaTeX is particularly useful for creating math equations.Many other pieces of
+software have implemented an editor just for the math functionality of
+LaTeX.Examples include Microsoft Word, [[https://www.libreoffice.org/][Libreoffice]][cite:@LibreOfficeFreeOffice] and even an [[https://workspace.google.com/marketplace/app/autolatex_equations/850293439076][addon]] for the
+Google office suite[cite:@AutoLaTeXEquationsGoogle].
+
+** Interactive editor :noexport:
+Feel free to try any of the example math equations in this editor courtesy of [[https://latex.codecogs.com/][codecogs]][cite:@OnlineLaTeXEquation].
+
+#+begin_export html
+<div id="equation-editor">
+    <div id="history"></div>
+    <div id="toolbar"></div>
+    <div id="latexInput" autocorrect="off"></div>
+    <div id="equation-output">
+      <img id="output"/>
+    </div>
+#+end_export
+** Examples
+LaTeX comes with an =equation= environment that can be used to nicely format
+equations:
+#+begin_src latex :file equation_1.png :eval never-export :exports code
+\begin{equation}
+  Z = \int^0_{1}{xdx} \cdot \frac{5}{3}y
+\end{equation}
+#+end_src
+\begin{equation}
+  Z = \int^0_{1}{xdx} \cdot \frac{5}{3}y
+\end{equation}
+
+There are a lot of new commands here, but note that they can only be used in a
+math environment. If math in normal text is desired, one can use the =\( \)=
+commands. This works like so: =\(\frac{5}{3}\)= -> \(\frac{5}{3}\).
+
+Using the [[https://ctan.org/pkg/amsmath?lang=en][amsmath]] package[cite:@CTANPackageAmsmath] provides different matrix
+environments that can be used like so:
+#+begin_src latex :file equation_2.png :eval never-export :exports code
+\begin{equation*}
+\begin{matrix}
+1 & 2 & 3\\
+a & b & c
+\end{matrix}
+\begin{pmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{pmatrix}
+\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}
+\end{equation}
+#+end_src
+
+\begin{equation*}
+\begin{matrix}
+1 & 2 & 3\\
+a & b & c
+\end{matrix}
+\begin{pmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{pmatrix}
+\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}
+\end{equation*}
+Notice how the equation environment has an =*=? This removes the Number annotation
+on the equation. For more information about Mathematical expressions, please
+refer to the [[https://www.overleaf.com/learn/latex/Mathematical_expressions][Overleaf documentation]]. There is also this [[file:symbols.pdf][excellent reference]] from [[https://cmor.rice.edu/][Rice
+University]].
+
+
+* Figures
+LaTeX has the ability to generate figures from text. The most ubiquitous package
+to do this is pgf, otherwise known as [[http://cremeronline.com/LaTeX/minimaltikz.pdf][TikZ]][cite:@CTANPackagePgf].
+** Examples
+#+begin_quote
+Authors Note: These examples are taken from the linked TikZ manual. I have edited them
+slightly to better fit this document.
+#+end_quote
+
+The simplest command in TikZ is =\draw=. It simply draws a line between points.
+#+begin_src latex :file figure1.png :exports both :eval never-export
+\begin{tikzpicture}
+\draw (0,0) -- (1,2) -- (2,3) -- (1,0);
+\end{tikzpicture}
+#+end_src
+
+#+attr_html: :width 300px
+#+RESULTS:
+[[file:figure1.png]]
+
+In this example, a line is drawn betwen four points resulting in a shape. Lines
+can take on different shapes, styles, and sizes.
+
+#+begin_src latex :file figure2.png :exports both :eval never-export
+
+\begin{tikzpicture}
+\draw [<->] (0,2) -- (0,0) -- (4,0);
+\draw [thick] (0,1.5) -- (3,0);
+\draw [ultra thick] (0,0) -- (2,2);
+\draw [help lines] (1,0) -- (1,1) -- (0,1);
+\end{tikzpicture}
+#+end_src
+
+#+attr_html: :width 300px
+#+RESULTS:
+[[file:figure2.png]]
+
+Most figures need labels, a fact which is handled by TikZ "nodes".
+
+#+begin_src latex :file figure3.png :exports both :eval never-export
+\begin{tikzpicture}
+\draw [thick, <->] (0,2) -- (0,0) -- (2,0);
+\node at (1,2.5) {A simple label};
+\end{tikzpicture}
+#+end_src
+#+attr_html: :width 300px
+#+RESULTS:
+[[file:figure3.png]]
+
+TikZ can take longer to understand, for this reason, reading the manual is
+recommended.
+* Extra Resources
+These are extra resources for learning LaTeX, they are useful as references, but
+can be intimidating to new users.
++ [[https://www.ctan.org/][CTAN]], the comprehensive TeX archive network
++ [[https://www.overleaf.com/learn/latex/Tutorials][Overleaf Tutorials]]
++ [[https://latex-tutorial.com/tutorials/][LaTeX-Tutorial.com]], a great learning resource
+
+* References
+#+print_bibliography:
+
+* Glossary
+** Text Editor
+A text editor is a piece of software that facilitates the creation of plain text
+files (files that do not contain formatting information). Text editors are most
+often used for computer programming, but can be used for any plain text files,
+including HTML and LaTeX files.
+
+*** Common Features of a Text Editor
+While the definition of a text editor is simply a piece of software that creates
+text files, most text editors also contain extra features that make file
+creation easier.
+
+One of the most ubiquitous features is syntax highlighting; this feature changes
+the color of specific characters so that the user has an easier time discerning
+the purpose of the text.
+#+CAPTION: Notice how different pieces of text are highlighted differently? This makes it easier for the document creator to understand.
+[[file:syntaxhighlighting.png]]
+
+Another feature commonly found in text editors is auto-complete. Auto-complete
+will suggest new text based on what is typed. Depending on the implementation,
+auto-complete may suggest anything from simple words to complex definitions
+written in other files. Some implementations can even utilize artificial
+intelligence to make the completions smarter, as is the case with the popular
+Github Copilot tool [cite:@GitHubCopilotYour].
+
+#+CAPTION: See how auto-complete suggests a function written earlier in the file? Auto-complete will often change the suggestions based on what has already been written.
+[[file:autocomplete.png]]
+
+Text editors also commonly contain an error checkers or /linters/; this is extremely useful in programming related scenarios because some errors can be hard to spot, even to the untrained eye. Linters can also aid in learning, as they often describe the problem in addition to pointing it out. Linters are not limited to just error, they can also show warnings and style recommendations.
+#+CAPTION: Notice how errors and warnings are differentiated on the left.
+[[file:linter.png]]
+
+Some text editors contain many more features than described here,  anything from sending emails to full fledged web browsing.
+*** Examples of Text Editors
+Many basic text editors exist, the most famous of which is probably Microsoft's Notepad. This text editor does not contain any of the features previously described, aiming to be as bare-bones as possible. On the other end of the spectrum, integrated development environments (IDE) aim to pack as many features as possible regarding a specific programming language or tool. Overleaf [cite:@OverleafOnlineLaTeX] is an online based LaTeX IDE that makes document creation much more intuitive to non-technical audiences.
+
+Some text editors are extensible, meaning that software can be written by third parties to extend, or increase, functionality. Some popular editors in this category are Microsoft's Visual Studio Code [cite:@VisualStudioCode], GNU Emacs[cite:@GNUEmacsGNU], and Vim [cite:@WelcomeHomeVim]. These editors have potentially limitless amounts of features and can be modified to fit a variety of different use cases.
+
+Text editors are often built into other software as well. Blender [cite:@foundationBlenderOrgHome], contains a editor for use with its built in Python (a programming language) interpreter. Many web based text editors also exist, such as the Text Editor [cite:@TextEditorFree].
+
+*** Conclusion
+Many different text editors exist and support a variety of different features. Some are very basic, some are extensible, and others are simply pieces of other software. They all share the ability to edit plain text, and most contain at least some quality of life improvements for the user, such as syntax highlighting. They are required to write most programming and markup languages.
+** LaTeX Environments
+LaTeX environments provide a way to apply an effect to a region of text. The
+=verse= environment will format the text in a format commonly used for
+sonnets[cite:@ShakespeareSonnetsSonnet2020].
+
+Every document contains a =document= environment. This environment tells LaTeX how
+to differentiate between header information, such as document margins, and the
+document body, the actual written content.
+
+For more information about environments, see the [[https://www.overleaf.com/learn/latex/Environments][Overleaf documentation]].
+** Plain Text
+[[https://en.wikipedia.org/wiki/Plain_text][Plain text]] is text without any formatting information. Plain text is edited in a
+[[Text Editor][text editor]]. LaTeX is written in plain text.
+
+** Document Class
+LaTeX documents commonly make use of "document classes". These are a set of
+instructions that tells LaTeX how to format a document. Custom classes can be
+created and distributed to provide a standardized format.
+
+An example of a commonly used third party document class would be
+[[https://mirror.mwt.me/ctan/macros/latex/contrib/apa7/apa7.pdf][apa7]][cite:@CTANPackageApa7].This class will
+automatically format all the content of a =.tex= file to fit 7th edition APA style
+[cite:@APAStyle]. apa7 comes with options to customize the document
+as well, allowing the user to select the document type (journal, paper
+submission, etc) and customize to their liking.

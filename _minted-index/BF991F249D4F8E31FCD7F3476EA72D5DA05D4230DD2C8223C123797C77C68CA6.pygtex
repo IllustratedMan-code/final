@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}equation*\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}matrix\PYG{n+nb}{\PYGZcb{}}
+1 \PYG{n+nb}{\PYGZam{}} 2 \PYG{n+nb}{\PYGZam{}} 3\PYG{k}{\PYGZbs{}\PYGZbs{}}
+a \PYG{n+nb}{\PYGZam{}} b \PYG{n+nb}{\PYGZam{}} c
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}matrix\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}pmatrix\PYG{n+nb}{\PYGZcb{}}
+1 \PYG{n+nb}{\PYGZam{}} 2 \PYG{n+nb}{\PYGZam{}} 3\PYG{k}{\PYGZbs{}\PYGZbs{}}
+a \PYG{n+nb}{\PYGZam{}} b \PYG{n+nb}{\PYGZam{}} c
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}pmatrix\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}bmatrix\PYG{n+nb}{\PYGZcb{}}
+1 \PYG{n+nb}{\PYGZam{}} 2 \PYG{n+nb}{\PYGZam{}} 3\PYG{k}{\PYGZbs{}\PYGZbs{}}
+a \PYG{n+nb}{\PYGZam{}} b \PYG{n+nb}{\PYGZam{}} c
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}bmatrix\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}
