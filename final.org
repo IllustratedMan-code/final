@@ -204,7 +204,7 @@ software have implemented an editor just for the math functionality of
 LaTeX.Examples include Microsoft Word, [[https://www.libreoffice.org/][Libreoffice]][cite:@LibreOfficeFreeOffice] and even an [[https://workspace.google.com/marketplace/app/autolatex_equations/850293439076][addon]] for the
 Google office suite[cite:@AutoLaTeXEquationsGoogle].
 
-** Interactive editor :noexport:
+** Interactive editor {{{html}}}
 Feel free to try any of the example math equations in this editor courtesy of [[https://latex.codecogs.com/][codecogs]][cite:@OnlineLaTeXEquation].
 
 #+begin_export html
