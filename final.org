@@ -46,7 +46,7 @@ the formatting of these documents. It is also frequently used by document
 creators to export to multiple formats without extra work.
 
 * A Basic Example
-On first glance, LaTeX looks a bit like a [programming language]. For the most
+On first glance, LaTeX looks a bit like a [[https://en.wikipedia.org/wiki/Programming_language][programming language]]. For the most
 part, LaTeX would *not* be considered a programming language. It is more like
 HTML [cite:@HTMLStandard] or MediaWiki markup [cite:@HelpFormattingMediaWiki].
 These languages are generally considered [[https://en.wikipedia.org/wiki/Markup_language][Markup languages]]. Markup languages are
@@ -111,7 +111,7 @@ will install the required packages. Assuming that VScode is installed, the [[htt
 Workshop]] extension must be installed through the built in marketplace. LaTeX
 can now be run through VScode if so desired.
 ** First Document
-Copy the code from [[A Basic Example][above]] into a file called `mydocument.tex` using a text editor.
+Copy the code from [[A Basic Example][above]] into a file called =mydocument.tex= using a text editor.
 If using VScode, =ctrl= + =alt= + =b= or =Build LaTeX= in the command palette should
 build the document so that it looks like the output above.
 
@@ -360,7 +360,7 @@ Github Copilot tool [cite:@GitHubCopilotYour].
 #+CAPTION: See how auto-complete suggests a function written earlier in the file? Auto-complete will often change the suggestions based on what has already been written.
 [[file:autocomplete.png]]
 
-Text editors also commonly contain an error checkers or /linters/; this is extremely useful in programming related scenarios because some errors can be hard to spot, even to the untrained eye. Linters can also aid in learning, as they often describe the problem in addition to pointing it out. Linters are not limited to just error, they can also show warnings and style recommendations.
+Text editors also commonly contain error checkers or /linters/; this is extremely useful in programming related scenarios because some errors can be hard to spot, even to the untrained eye. Linters can also aid in learning, as they often describe the problem in addition to pointing it out. Linters are not limited to just error, they can also show warnings and style recommendations.
 #+CAPTION: Notice how errors and warnings are differentiated on the left.
 [[file:linter.png]]
 
