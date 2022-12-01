@@ -352,9 +352,11 @@ Here is some text, let's cite LaTeX \parencite{LaTeX}.
 
 \end{document}
 #+end_src
-
 #+attr_html: :width 300px
 [[file:citation.png]]
+
+An excellent tool to populate =.bib= files with is [[https://www.zotero.org/][Zotero]]. It has the ability to
+generate citations from websites and other sources.
 
 * Conclusion and Extra Resources
 LaTeX is a very complicated tool, but also an extremely useful one. The content
