@@ -279,7 +279,7 @@ LaTeX has the ability to generate figures from text. The most ubiquitous package
 to do this is pgf, otherwise known as [[http://cremeronline.com/LaTeX/minimaltikz.pdf][TikZ]][cite:@CTANPackagePgf].
 ** Examples
 #+begin_quote
-Authors Note: These examples are taken from the linked TikZ manual. I have edited them
+Author's Note: These examples are taken from the linked TikZ manual. I have edited them
 slightly to better fit this document.
 #+end_quote
 
@@ -357,6 +357,10 @@ Here is some text, let's cite LaTeX \parencite{LaTeX}.
 
 An excellent tool to populate =.bib= files with is [[https://www.zotero.org/][Zotero]]. It has the ability to
 generate citations from websites and other sources.
+#+begin_quote
+Author's Note: I used Zotero for all the references in this document! It really helps speed up
+the citation process.
+#+end_quote
 
 * Conclusion and Extra Resources
 LaTeX is a very complicated tool, but also an extremely useful one. The content
@@ -368,7 +372,7 @@ provides. The following resources can be used to learn more about LaTeX and its 
 + [[https://www.latex-project.org/help/documentation/][Official LaTeX documentation]]
 
 #+begin_quote
-Author's note: Some of these resources can be indimidating to new users, but are
+Author's Note: Some of these resources can be indimidating to new users, but are
 great as reference material.
 #+end_quote
 
