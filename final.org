@@ -9,6 +9,9 @@
 #+latex_header: \usepackage{minted}
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="style.css">
 #+EXPORT_FILE_NAME: index.html
+* TODO Abstract
+This document covers the installation process and basic use of the typesetting
+tool known as \(\LaTeX\).
 
 * Introduction
 LaTeX is a "document preparation system" [cite:@LaTeXDocumentPreparation]. It
@@ -322,12 +325,50 @@ Most figures need labels, a fact which is handled by TikZ "nodes".
 
 TikZ can take longer to understand, for this reason, reading the manual is
 recommended.
-* Extra Resources
-These are extra resources for learning LaTeX, they are useful as references, but
-can be intimidating to new users.
+* Automatic Bibliographies
+There are some facilities built in to LaTeX for bibliographies, but the standard
+is the package [[https://ctan.mirrors.hoobly.com/macros/latex/contrib/biblatex/doc/biblatex.pdf][BibLaTeX]][cite:@CTANPackageBibLaTeX]. Citations are placed in a
+=.bib= file in "bibTeX" format. Here is an example (=sources.bib=):
+#+begin_src latex :tangle sources.bib :eval never-export
+@misc{LaTeX,
+  url = {https://www.latex-project.org/},
+  title = { LaTeX },
+  date = {2022},
+  abstractNote = {LaTeX is a high-quality typesetting system; it includes
+                  features designed for the production of technical and
+                  scientific documentation.},
+}
+#+end_src
+
+This file is then imported into a =.tex= file like so:
+#+begin_src latex :tangle citation_test.tex :eval never-export
+\documentclass{article}
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{sources.bib}
+\begin{document}
+Here is some text, let's cite LaTeX \parencite{LaTeX}.
+
+\printbibliography{}
+
+\end{document}
+#+end_src
+
+#+attr_html: :width 300px
+[[file:citation.png]]
+
+* Conclusion and Extra Resources
+LaTeX is a very complicated tool, but also an extremely useful one. The content
+in this document only covers a very small amount of possibilities that LaTeX
+provides. The following resources can be used to learn more about LaTeX and its uses:
 + [[https://www.ctan.org/][CTAN]], the comprehensive TeX archive network
 + [[https://www.overleaf.com/learn/latex/Tutorials][Overleaf Tutorials]]
 + [[https://latex-tutorial.com/tutorials/][LaTeX-Tutorial.com]], a great learning resource
++ [[https://www.latex-project.org/help/documentation/][Official LaTeX documentation]]
+
+#+begin_quote
+Author's note: Some of these resources can be indimidating to new users, but are
+great as reference material.
+#+end_quote
 
 * References
 #+print_bibliography:

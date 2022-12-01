@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-29 Tue 09:14 -->
+<!-- 2022-12-01 Thu 14:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Introduction to LaTeX</title>
@@ -48,75 +48,86 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2c075c4">Introduction</a>
+<li><a href="#orgf30355f"><span class="todo TODO">TODO</span> Abstract</a></li>
+<li><a href="#orgff3c3f1">Introduction</a>
 <ul>
-<li><a href="#org2bb99c1">Prerequisite Knowledge</a></li>
-<li><a href="#orgb9b2145">Uses</a></li>
+<li><a href="#orge8ccc68">Prerequisite Knowledge</a></li>
+<li><a href="#org8018bd8">Uses</a></li>
 </ul>
 </li>
-<li><a href="#org2ff0206">A Basic Example</a></li>
-<li><a href="#org9308389">Getting Started</a>
+<li><a href="#org65a1612">A Basic Example</a></li>
+<li><a href="#org309de5b">Getting Started</a>
 <ul>
-<li><a href="#org4993b4e">Installation</a>
+<li><a href="#orga6eb511">Installation</a>
 <ul>
-<li><a href="#orgddc9b60">Overleaf</a></li>
-<li><a href="#orgc93ba8f">Windows</a></li>
-<li><a href="#org866ae4b">MacOS</a></li>
-<li><a href="#org3580d99">Linux (Ubuntu)</a></li>
+<li><a href="#org68fb312">Overleaf</a></li>
+<li><a href="#org5154d3e">Windows</a></li>
+<li><a href="#org58d3d02">MacOS</a></li>
+<li><a href="#orge38e589">Linux (Ubuntu)</a></li>
 </ul>
 </li>
-<li><a href="#org3928346">First Document</a></li>
+<li><a href="#orgaa7c52e">First Document</a></li>
 </ul>
 </li>
-<li><a href="#org06cb8a9">Basic Syntax</a></li>
-<li><a href="#org6018cde">Math Equations</a>
+<li><a href="#orga5a3763">Basic Syntax</a></li>
+<li><a href="#orga34b17f">Math Equations</a>
 <ul>
-<li><a href="#orgc6dd3db">Interactive editor</a></li>
-<li><a href="#org4e3c32e">Examples</a></li>
+<li><a href="#org4e429fb">Interactive editor</a></li>
+<li><a href="#orgf2c27ce">Examples</a></li>
 </ul>
 </li>
-<li><a href="#org338b378">Figures</a>
+<li><a href="#orgb33a144">Figures</a>
 <ul>
-<li><a href="#orgf89cd41">Examples</a></li>
+<li><a href="#orgb652d08">Examples</a></li>
 </ul>
 </li>
-<li><a href="#org341852c">Extra Resources</a></li>
-<li><a href="#orge95ad55">References</a></li>
-<li><a href="#org369af62">Glossary</a>
+<li><a href="#org128a0c4">Automatic Bibliographies</a></li>
+<li><a href="#org48eece6">Conclusion and Extra Resources</a></li>
+<li><a href="#orgd247d34">References</a></li>
+<li><a href="#orgc918c46">Glossary</a>
 <ul>
-<li><a href="#orgea6848c">Text Editor</a>
+<li><a href="#org406682a">Text Editor</a>
 <ul>
-<li><a href="#org32e5934">Common Features of a Text Editor</a></li>
-<li><a href="#orgacc36d9">Examples of Text Editors</a></li>
-<li><a href="#orgdefea53">Conclusion</a></li>
+<li><a href="#org6a04d3a">Common Features of a Text Editor</a></li>
+<li><a href="#org163ec2f">Examples of Text Editors</a></li>
+<li><a href="#orgb44c56d">Conclusion</a></li>
 </ul>
 </li>
-<li><a href="#org140dfa5">LaTeX Environments</a></li>
-<li><a href="#orga64533c">Plain Text</a></li>
-<li><a href="#orgd900c75">Document Class</a></li>
+<li><a href="#org6651b2e">LaTeX Environments</a></li>
+<li><a href="#org889dee6">Plain Text</a></li>
+<li><a href="#org3ba5b4c">Document Class</a></li>
 </ul>
 </li>
 </ul>
+</div>
+</div>
+<div id="outline-container-orgf30355f" class="outline-2">
+<h2 id="orgf30355f"><span class="todo TODO">TODO</span> Abstract</h2>
+<div class="outline-text-2" id="text-orgf30355f">
+<p>
+This document covers the installation process and basic use of the typesetting
+tool known as \(\LaTeX\).
+</p>
 </div>
 </div>
 
-<div id="outline-container-org2c075c4" class="outline-2">
-<h2 id="org2c075c4">Introduction</h2>
-<div class="outline-text-2" id="text-org2c075c4">
+<div id="outline-container-orgff3c3f1" class="outline-2">
+<h2 id="orgff3c3f1">Introduction</h2>
+<div class="outline-text-2" id="text-orgff3c3f1">
 <p>
-LaTeX is a &ldquo;document preparation system&rdquo; (<a href="#citeproc_bib_item_13"><i>LaTeX - a Document Preparation System</i>, n.d.</a>). It
+LaTeX is a &ldquo;document preparation system&rdquo; (<a href="#citeproc_bib_item_14"><i>LaTeX - a Document Preparation System</i>, n.d.</a>). It
 is a program that takes a <i>plain text</i><sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> file written in a special
 syntax and creates a document, commonly in the PDF format. Rather than display
-the formatting in the editor, a la Microsoft Word (<a href="#citeproc_bib_item_16"><i>Microsoft Word – Word Processing Software | Microsoft 365</i>, n.d.</a>), LaTeX uses a set of codes or
+the formatting in the editor, a la Microsoft Word (<a href="#citeproc_bib_item_17"><i>Microsoft Word – Word Processing Software | Microsoft 365</i>, n.d.</a>), LaTeX uses a set of codes or
 &ldquo;commands&rdquo; to determine how the final document will look. Italicized text for
 example, would look <code>\emph{like this}</code> in the text file, but <i>like this</i> in the
 final document. This document aims to provide a brief introduction in the use of
 LaTeX, covering everything from general syntax to document classes.
 </p>
 </div>
-<div id="outline-container-org2bb99c1" class="outline-3">
-<h3 id="org2bb99c1">Prerequisite Knowledge</h3>
-<div class="outline-text-3" id="text-org2bb99c1">
+<div id="outline-container-orge8ccc68" class="outline-3">
+<h3 id="orge8ccc68">Prerequisite Knowledge</h3>
+<div class="outline-text-3" id="text-orge8ccc68">
 <p>
 The following skills are required to read this document successfully:
 </p>
@@ -125,14 +136,14 @@ The following skills are required to read this document successfully:
 <li>Computer skills, basic terminology<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></li>
 <li>Ability to follow detailed instructions</li>
 <li>Ability to use a <i>text editor</i><sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>, instructions will be given using
-<a href="https://code.visualstudio.com/">Visual Studio Code</a> (VScode)(<a href="#citeproc_bib_item_23"><i>Visual Studio Code - Code Editing. Redefined</i>, n.d.--a</a>)</li>
+<a href="https://code.visualstudio.com/">Visual Studio Code</a> (VScode)(<a href="#citeproc_bib_item_24"><i>Visual Studio Code - Code Editing. Redefined</i>, n.d.--a</a>)</li>
 <li>If using Linux, basic terminal knowledge is assumed<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb9b2145" class="outline-3">
-<h3 id="orgb9b2145">Uses</h3>
-<div class="outline-text-3" id="text-orgb9b2145">
+<div id="outline-container-org8018bd8" class="outline-3">
+<h3 id="org8018bd8">Uses</h3>
+<div class="outline-text-3" id="text-org8018bd8">
 <p>
 In the case of Big Publishing CO., we use it for publishing. Authors submit
 their work in an arbitrary format, which might include handwritten equations,
@@ -144,26 +155,26 @@ creators to export to multiple formats without extra work.
 </div>
 </div>
 
-<div id="outline-container-org2ff0206" class="outline-2">
-<h2 id="org2ff0206">A Basic Example</h2>
-<div class="outline-text-2" id="text-org2ff0206">
+<div id="outline-container-org65a1612" class="outline-2">
+<h2 id="org65a1612">A Basic Example</h2>
+<div class="outline-text-2" id="text-org65a1612">
 <p>
 On first glance, LaTeX looks a bit like a <a href="https://en.wikipedia.org/wiki/Programming_language">programming language</a>. For the most
 part, LaTeX would <b>not</b> be considered a programming language. It is more like
-HTML (<a href="#citeproc_bib_item_12"><i>HTML Standard</i>, n.d.</a>) or MediaWiki markup (<a href="#citeproc_bib_item_11"><i>Help</i>, n.d.</a>).
+HTML (<a href="#citeproc_bib_item_13"><i>HTML Standard</i>, n.d.</a>) or MediaWiki markup (<a href="#citeproc_bib_item_12"><i>Help</i>, n.d.</a>).
 These languages are generally considered <a href="https://en.wikipedia.org/wiki/Markup_language">Markup languages</a>. Markup languages are
 much easier to learn in comparison to programming languages. Here is a very short
 example document in LaTeX:
 </p>
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #a7c080;">\documentclass</span>{<span style="color: #e69875;">article</span>}
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">document</span>}
-Hello, World! I just wrote my first <span style="color: #a7c080;">\LaTeX</span>{} document!
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">document</span>}
+<pre class="src src-latex"><span class="org-font-latex-sedate"><span class="org-keyword">\documentclass</span></span>{<span class="org-function-name">article</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">document</span>}
+Hello, World! I just wrote my first <span class="org-font-latex-sedate"><span class="org-keyword">\LaTeX</span></span>{} document!
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">document</span>}
 </pre>
 </div>
 
-<div id="org3b9c57c" class="figure">
+<div id="org7c87459" class="figure">
 <p><img src="hello_world.png" alt="hello_world.png" />
 </p>
 </div>
@@ -175,31 +186,31 @@ blocks directly after code.
 </div>
 </div>
 
-<div id="outline-container-org9308389" class="outline-2">
-<h2 id="org9308389">Getting Started</h2>
-<div class="outline-text-2" id="text-org9308389">
+<div id="outline-container-org309de5b" class="outline-2">
+<h2 id="org309de5b">Getting Started</h2>
+<div class="outline-text-2" id="text-org309de5b">
 <p>
 There are many different ways to use LaTeX. LaTeX is a program, but it is also a
 language. LaTeX has been at least partially implemented in many different pieces of
 software, particularly the math typesetting functionality, which will be
-covered <a href="#org6018cde">later</a>.
+covered <a href="#orga34b17f">later</a>.
 </p>
 </div>
 
-<div id="outline-container-org4993b4e" class="outline-3">
-<h3 id="org4993b4e">Installation</h3>
-<div class="outline-text-3" id="text-org4993b4e">
+<div id="outline-container-orga6eb511" class="outline-3">
+<h3 id="orga6eb511">Installation</h3>
+<div class="outline-text-3" id="text-orga6eb511">
 <p>
 In this section, we will cover an overview of the installation of
 the LaTeX <i>program</i> for every major platform.
 </p>
 </div>
-<div id="outline-container-orgddc9b60" class="outline-4">
-<h4 id="orgddc9b60">Overleaf</h4>
-<div class="outline-text-4" id="text-orgddc9b60">
+<div id="outline-container-org68fb312" class="outline-4">
+<h4 id="org68fb312">Overleaf</h4>
+<div class="outline-text-4" id="text-org68fb312">
 <p>
 One of the easiest methods to get
-started is to use <a href="https://www.overleaf.com/">Overleaf</a> (<a href="#citeproc_bib_item_19"><i>Overleaf, Online LaTeX Editor</i>, n.d.</a>). Overleaf is an online
+started is to use <a href="https://www.overleaf.com/">Overleaf</a> (<a href="#citeproc_bib_item_20"><i>Overleaf, Online LaTeX Editor</i>, n.d.</a>). Overleaf is an online
 system that removes much of the hassle of creating documents in LaTeX.
 Overleaf&rsquo;s online naturre For
 professional use, Overleaf is not recommended as data privacy is not assured.
@@ -208,41 +219,41 @@ is great as a learning tool and for personal use however.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc93ba8f" class="outline-4">
-<h4 id="orgc93ba8f">Windows</h4>
-<div class="outline-text-4" id="text-orgc93ba8f">
+<div id="outline-container-org5154d3e" class="outline-4">
+<h4 id="org5154d3e">Windows</h4>
+<div class="outline-text-4" id="text-org5154d3e">
 <p>
 The official recommended  way to install LaTeX in Windows is to use the MiKTeX
-(<a href="#citeproc_bib_item_17"><i>MikTex</i>, 2022</a>) distribution. Follow the <a href="https://miktex.org/howto/install-miktex">official instructions</a> to install. Make
+(<a href="#citeproc_bib_item_18"><i>MikTex</i>, 2022</a>) distribution. Follow the <a href="https://miktex.org/howto/install-miktex">official instructions</a> to install. Make
 sure the correct <a href="https://miktex.org/kb/prerequisites-2-9">version of Windows</a> is installed. Once installed, the program
-<a href="https://strawberryperl.com/">Straberry Perl</a> (<a href="#citeproc_bib_item_21"><i>Strawberry Perl for Windows</i>, n.d.</a>) must be installed. Assuming that
+<a href="https://strawberryperl.com/">Straberry Perl</a> (<a href="#citeproc_bib_item_22"><i>Strawberry Perl for Windows</i>, n.d.</a>) must be installed. Assuming that
 VScode is installed, the <a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop</a> extension must be installed through the
 built in marketplace. LaTeX can now be run through VScode if so desired.
 </p>
 </div>
 </div>
-<div id="outline-container-org866ae4b" class="outline-4">
-<h4 id="org866ae4b">MacOS</h4>
-<div class="outline-text-4" id="text-org866ae4b">
+<div id="outline-container-org58d3d02" class="outline-4">
+<h4 id="org58d3d02">MacOS</h4>
+<div class="outline-text-4" id="text-org58d3d02">
 <p>
 The official recommended way to install LaTeX in MacOS is to use the <a href="https://tug.org/mactex/index.html">MacTeX</a>
-distribution(<a href="#citeproc_bib_item_15"><i>MacTeX - TeX Users Group</i>, n.d.</a>). Follow the
+distribution(<a href="#citeproc_bib_item_16"><i>MacTeX - TeX Users Group</i>, n.d.</a>). Follow the
 <a href="https://tug.org/mactex/mactex-download.html">official instructions</a> to install. Assuming that VScode is installed, the <a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX
 Workshop</a> extension must be installed through the built in marketplace. LaTeX
 can now be run through VScode if so desired.
 </p>
 </div>
 </div>
-<div id="outline-container-org3580d99" class="outline-4">
-<h4 id="org3580d99">Linux (Ubuntu)</h4>
-<div class="outline-text-4" id="text-org3580d99">
+<div id="outline-container-orge38e589" class="outline-4">
+<h4 id="orge38e589">Linux (Ubuntu)</h4>
+<div class="outline-text-4" id="text-orge38e589">
 <p>
 For Ubuntu linux, simply running:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #fdf6e3;">sudo</span> apt update
-<span style="color: #fdf6e3;">sudo</span> apt install texlive-full
-<span style="color: #fdf6e3;">sudo</span> apt install latexmk
+<pre class="src src-bash"><span class="org-type">sudo</span> apt update
+<span class="org-type">sudo</span> apt install texlive-full
+<span class="org-type">sudo</span> apt install latexmk
 </pre>
 </div>
 <p>
@@ -253,11 +264,11 @@ can now be run through VScode if so desired.
 </div>
 </div>
 </div>
-<div id="outline-container-org3928346" class="outline-3">
-<h3 id="org3928346">First Document</h3>
-<div class="outline-text-3" id="text-org3928346">
+<div id="outline-container-orgaa7c52e" class="outline-3">
+<h3 id="orgaa7c52e">First Document</h3>
+<div class="outline-text-3" id="text-orgaa7c52e">
 <p>
-Copy the code from <a href="#org2ff0206">above</a> into a file called <code>mydocument.tex</code> using a text editor.
+Copy the code from <a href="#org65a1612">above</a> into a file called <code>mydocument.tex</code> using a text editor.
 If using VScode, <code>ctrl</code> + <code>alt</code> + <code>b</code> or <code>Build LaTeX</code> in the command palette should
 build the document so that it looks like the output above.
 </p>
@@ -276,22 +287,22 @@ A document called <code>mydocument.pdf</code> should now appear in the same dire
 
 <p>
 <a href="https://mirrors.rit.edu/CTAN/support/latexmk/latexmk.pdf">Latexmk</a> is a special command that automates much of the normal build process
-(<a href="#citeproc_bib_item_5"><i>CTAN: Package Latexmk</i>, n.d.</a>).
+(<a href="#citeproc_bib_item_6"><i>CTAN: Package Latexmk</i>, n.d.</a>).
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org06cb8a9" class="outline-2">
-<h2 id="org06cb8a9">Basic Syntax</h2>
-<div class="outline-text-2" id="text-org06cb8a9">
+<div id="outline-container-orga5a3763" class="outline-2">
+<h2 id="orga5a3763">Basic Syntax</h2>
+<div class="outline-text-2" id="text-orga5a3763">
 <p>
 Taking our basic example again:
 </p>
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #a7c080;">\documentclass</span>{<span style="color: #e69875;">article</span>}
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">document</span>}
-Hello, World! I just wrote my first <span style="color: #a7c080;">\LaTeX</span>{} document!
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">document</span>}
+<pre class="src src-latex"><span class="org-font-latex-sedate"><span class="org-keyword">\documentclass</span></span>{<span class="org-function-name">article</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">document</span>}
+Hello, World! I just wrote my first <span class="org-font-latex-sedate"><span class="org-keyword">\LaTeX</span></span>{} document!
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">document</span>}
 </pre>
 </div>
 <p>
@@ -301,11 +312,11 @@ rest of the text. <code>{}</code> characters are used to provide arguments to th
 
 <p>
 The <code>\begin</code> and <code>\end</code> commands are special, they define an
-<i><a href="#org140dfa5">environment</a></i>. There are many different kinds of environment, but all documents
+<i><a href="#org6651b2e">environment</a></i>. There are many different kinds of environment, but all documents
 should contain a <code>document</code> environment. The text before the <code>document</code> environment
 forms the &ldquo;header&rdquo; of the document. This is where important meta information,
 such as font and margins, goes. In our example, the only header information is
-the <a href="#orgd900c75">document class</a> which provides formatting defaults such as font, margin, etc.
+the <a href="#org3ba5b4c">document class</a> which provides formatting defaults such as font, margin, etc.
 In this case, the document class is <code>article</code> which is commonly used as a starting
 point for more complicated formatting.
 </p>
@@ -314,48 +325,48 @@ point for more complicated formatting.
 A slightly more complicated example:
 </p>
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #a7c080;">\documentclass</span>{<span style="color: #e69875;">article</span>}
-<span style="color: #a7c080;">\usepackage</span>{<span style="color: #e69875;">verse</span>}
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">document</span>}
-A numbered list can <span style="text-decoration: underline;">be created</span> using the enumerate environment:
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">enumerate</span>}
-        <span style="color: #a7c080;">\item</span> The first item
-        <span style="color: #a7c080;">\item</span> The second item
-        <span style="color: #a7c080;">\item</span> The third item
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">enumerate</span>}
-An unordered list can <span style="text-decoration: underline;">be created</span> using the itemize environment:
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">itemize</span>}
-        <span style="color: #a7c080;">\item</span> The first item
-        <span style="color: #a7c080;">\item</span> The second item
-        <span style="color: #a7c080;">\item</span> The third item
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">itemize</span>}
-If you want to write poetry, the verse environment can <span style="text-decoration: underline;">be used</span>:
+<pre class="src src-latex"><span class="org-font-latex-sedate"><span class="org-keyword">\documentclass</span></span>{<span class="org-function-name">article</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\usepackage</span></span>{<span class="org-function-name">verse</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">document</span>}
+A numbered list can <span class="org-writegood-passive-voice">be created</span> using the enumerate environment:
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">enumerate</span>}
+        <span class="org-font-latex-sedate"><span class="org-keyword">\item</span></span> The first item
+        <span class="org-font-latex-sedate"><span class="org-keyword">\item</span></span> The second item
+        <span class="org-font-latex-sedate"><span class="org-keyword">\item</span></span> The third item
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">enumerate</span>}
+An unordered list can <span class="org-writegood-passive-voice">be created</span> using the itemize environment:
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">itemize</span>}
+        <span class="org-font-latex-sedate"><span class="org-keyword">\item</span></span> The first item
+        <span class="org-font-latex-sedate"><span class="org-keyword">\item</span></span> The second item
+        <span class="org-font-latex-sedate"><span class="org-keyword">\item</span></span> The third item
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">itemize</span>}
+If you want to write poetry, the verse environment can <span class="org-writegood-passive-voice">be used</span>:
 
-<span style="color: #d3d3d3;">\poemtitle</span>{Sonnet 1, Shakespeare}
-<span style="color: #a7c080;">\settowidth</span>{<span style="color: #9da9a0;">\versewidth</span>}{<span style="color: #9da9a0;">Feed&#8217;st thy light&#8217;s flame with self-substantial fuel,</span>}
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">verse</span>}[<span style="color: #d3d3d3;">\versewidth</span>]
-  From fairest creatures we desire increase, <span style="color: #dbbc7f;">\\</span>
-That thereby beauty&#8217;s rose might never die, <span style="color: #dbbc7f;">\\</span>
-But, as the riper should by time decease, <span style="color: #dbbc7f;">\\</span>
-His tender heir might bear his memory. <span style="color: #dbbc7f;">\\</span>
-But thou, contracted to thine own bright eyes, <span style="color: #dbbc7f;">\\</span>
-Feed&#8217;st thy light&#8217;s flame with self-substantial fuel, <span style="color: #dbbc7f;">\\</span>
-Making a famine where abundance lies, <span style="color: #dbbc7f;">\\</span>
-Thyself thy foe, to thy sweet self too cruel. <span style="color: #dbbc7f;">\\</span>
-Thou that art now the world&#8217;s fresh ornament <span style="color: #dbbc7f;">\\</span>
-And only herald to the gaudy spring <span style="color: #dbbc7f;">\\</span>
-Within thine own bud buriest thy content <span style="color: #dbbc7f;">\\</span>
-And, tender churl, mak&#8217;st waste in niggarding. <span style="color: #dbbc7f;">\\</span>
-Pity the world, or else this glutton be&#8212; <span style="color: #dbbc7f;">\\</span>
-To eat the world&#8217;s due, by the grave and thee. <span style="color: #dbbc7f;">\\</span>
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">verse</span>}
+<span class="org-font-latex-sedate">\poemtitle</span>{Sonnet 1, Shakespeare}
+<span class="org-font-latex-sedate"><span class="org-keyword">\settowidth</span></span>{<span class="org-font-latex-sedate"><span class="org-variable-name">\versewidth</span></span>}{<span class="org-variable-name">Feed&#8217;st thy light&#8217;s flame with self-substantial fuel,</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">verse</span>}[<span class="org-font-latex-sedate">\versewidth</span>]
+  From fairest creatures we desire increase, <span class="org-font-latex-warning">\\</span>
+That thereby beauty&#8217;s rose might never die, <span class="org-font-latex-warning">\\</span>
+But, as the riper should by time decease, <span class="org-font-latex-warning">\\</span>
+His tender heir might bear his memory. <span class="org-font-latex-warning">\\</span>
+But thou, contracted to thine own bright eyes, <span class="org-font-latex-warning">\\</span>
+Feed&#8217;st thy light&#8217;s flame with self-substantial fuel, <span class="org-font-latex-warning">\\</span>
+Making a famine where abundance lies, <span class="org-font-latex-warning">\\</span>
+Thyself thy foe, to thy sweet self too cruel. <span class="org-font-latex-warning">\\</span>
+Thou that art now the world&#8217;s fresh ornament <span class="org-font-latex-warning">\\</span>
+And only herald to the gaudy spring <span class="org-font-latex-warning">\\</span>
+Within thine own bud buriest thy content <span class="org-font-latex-warning">\\</span>
+And, tender churl, mak&#8217;st waste in niggarding. <span class="org-font-latex-warning">\\</span>
+Pity the world, or else this glutton be&#8212; <span class="org-font-latex-warning">\\</span>
+To eat the world&#8217;s due, by the grave and thee. <span class="org-font-latex-warning">\\</span>
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">verse</span>}
 
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">document</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">document</span>}
 </pre>
 </div>
 
 
-<div id="org255745b" class="figure">
+<div id="org063b33e" class="figure">
 <p><img src="complicated_example.png" alt="complicated_example.png" />
 </p>
 </div>
@@ -369,28 +380,28 @@ be installed.
 
 <p>
 In the verse environment the <code>\\</code> code is used to indicate a line break. The other commands
-relating to poetry are documented by the <a href="https://ctan.math.washington.edu/tex-archive/macros/latex/contrib/verse/verse.pdf">verse package</a> (<a href="#citeproc_bib_item_7"><i>CTAN: Package Verse</i>, n.d.</a>).
+relating to poetry are documented by the <a href="https://ctan.math.washington.edu/tex-archive/macros/latex/contrib/verse/verse.pdf">verse package</a> (<a href="#citeproc_bib_item_8"><i>CTAN: Package Verse</i>, n.d.</a>).
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org6018cde" class="outline-2">
-<h2 id="org6018cde">Math Equations</h2>
-<div class="outline-text-2" id="text-org6018cde">
+<div id="outline-container-orga34b17f" class="outline-2">
+<h2 id="orga34b17f">Math Equations</h2>
+<div class="outline-text-2" id="text-orga34b17f">
 <p>
 LaTeX is particularly useful for creating math equations.Many other pieces of
 software have implemented an editor just for the math functionality of
-LaTeX.Examples include Microsoft Word, <a href="https://www.libreoffice.org/">Libreoffice</a>(<a href="#citeproc_bib_item_14"><i>LibreOffice - Free Office Suite</i>, n.d.</a>) and even an <a href="https://workspace.google.com/marketplace/app/autolatex_equations/850293439076">addon</a> for the
+LaTeX.Examples include Microsoft Word, <a href="https://www.libreoffice.org/">Libreoffice</a>(<a href="#citeproc_bib_item_15"><i>LibreOffice - Free Office Suite</i>, n.d.</a>) and even an <a href="https://workspace.google.com/marketplace/app/autolatex_equations/850293439076">addon</a> for the
 Google office suite(<a href="#citeproc_bib_item_2"><i>Auto-LaTeX Equations - Google Workspace Marketplace</i>, n.d.</a>).
 </p>
 </div>
 
-<div id="outline-container-orgc6dd3db" class="outline-3">
-<h3 id="orgc6dd3db">Interactive editor</h3>
-<div class="outline-text-3" id="text-orgc6dd3db">
+<div id="outline-container-org4e429fb" class="outline-3">
+<h3 id="org4e429fb">Interactive editor</h3>
+<div class="outline-text-3" id="text-org4e429fb">
 <p>
-Feel free to try any of the example math equations in this editor courtesy of <a href="https://latex.codecogs.com/">codecogs</a>(<a href="#citeproc_bib_item_18"><i>Online LaTeX Equation Editor - Create, Integrate, Download</i>, n.d.</a>).
+Feel free to try any of the example math equations in this editor courtesy of <a href="https://latex.codecogs.com/">codecogs</a>(<a href="#citeproc_bib_item_19"><i>Online LaTeX Equation Editor - Create, Integrate, Download</i>, n.d.</a>).
 </p>
 
 <div id="equation-editor">
@@ -402,17 +413,17 @@ Feel free to try any of the example math equations in this editor courtesy of <a
     </div>
 </div>
 </div>
-<div id="outline-container-org4e3c32e" class="outline-3">
-<h3 id="org4e3c32e">Examples</h3>
-<div class="outline-text-3" id="text-org4e3c32e">
+<div id="outline-container-orgf2c27ce" class="outline-3">
+<h3 id="orgf2c27ce">Examples</h3>
+<div class="outline-text-3" id="text-orgf2c27ce">
 <p>
 LaTeX comes with an <code>equation</code> environment that can be used to nicely format
 equations:
 </p>
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">equation</span>}
-<span style="color: #a7c080;">  Z = </span><span style="color: #a7c080;">\int</span><span style="color: #eaedc8;">^0_{1}</span><span style="color: #a7c080;">{xdx} </span><span style="color: #a7c080;">\cdot</span><span style="color: #a7c080;"> </span><span style="color: #a7c080;">\frac</span><span style="color: #a7c080;">{5}{3}y</span>
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">equation</span>}
+<pre class="src src-latex"><span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">equation</span>}
+<span class="org-font-latex-math">  Z = </span><span class="org-font-latex-sedate"><span class="org-font-latex-math">\int</span></span><span class="org-font-latex-math"><span class="org-font-latex-script-char">^0_{1}</span></span><span class="org-font-latex-math">{xdx} </span><span class="org-font-latex-sedate"><span class="org-font-latex-math">\cdot</span></span><span class="org-font-latex-math"> </span><span class="org-font-latex-sedate"><span class="org-font-latex-math">\frac</span></span><span class="org-font-latex-math">{5}{3}y</span>
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">equation</span>}
 </pre>
 </div>
 \begin{equation}
@@ -430,20 +441,20 @@ Using the <a href="https://ctan.org/pkg/amsmath?lang=en">amsmath</a> package(<a 
 environments that can be used like so:
 </p>
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">equation*</span>}
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">matrix</span>}
-1 <span style="color: #dbbc7f;">&amp;</span> 2 <span style="color: #dbbc7f;">&amp;</span> 3<span style="color: #dbbc7f;">\\</span>
-a <span style="color: #dbbc7f;">&amp;</span> b <span style="color: #dbbc7f;">&amp;</span> c
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">matrix</span>}
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">pmatrix</span>}
-1 <span style="color: #dbbc7f;">&amp;</span> 2 <span style="color: #dbbc7f;">&amp;</span> 3<span style="color: #dbbc7f;">\\</span>
-a <span style="color: #dbbc7f;">&amp;</span> b <span style="color: #dbbc7f;">&amp;</span> c
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">pmatrix</span>}
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">bmatrix</span>}
-1 <span style="color: #dbbc7f;">&amp;</span> 2 <span style="color: #dbbc7f;">&amp;</span> 3<span style="color: #dbbc7f;">\\</span>
-a <span style="color: #dbbc7f;">&amp;</span> b <span style="color: #dbbc7f;">&amp;</span> c
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">bmatrix</span>}
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">equation</span>}
+<pre class="src src-latex"><span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">equation*</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">matrix</span>}
+1 <span class="org-font-latex-warning">&amp;</span> 2 <span class="org-font-latex-warning">&amp;</span> 3<span class="org-font-latex-warning">\\</span>
+a <span class="org-font-latex-warning">&amp;</span> b <span class="org-font-latex-warning">&amp;</span> c
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">matrix</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">pmatrix</span>}
+1 <span class="org-font-latex-warning">&amp;</span> 2 <span class="org-font-latex-warning">&amp;</span> 3<span class="org-font-latex-warning">\\</span>
+a <span class="org-font-latex-warning">&amp;</span> b <span class="org-font-latex-warning">&amp;</span> c
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">pmatrix</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">bmatrix</span>}
+1 <span class="org-font-latex-warning">&amp;</span> 2 <span class="org-font-latex-warning">&amp;</span> 3<span class="org-font-latex-warning">\\</span>
+a <span class="org-font-latex-warning">&amp;</span> b <span class="org-font-latex-warning">&amp;</span> c
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">bmatrix</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">equation</span>}
 </pre>
 </div>
 
@@ -472,17 +483,17 @@ University</a>.
 </div>
 
 
-<div id="outline-container-org338b378" class="outline-2">
-<h2 id="org338b378">Figures</h2>
-<div class="outline-text-2" id="text-org338b378">
+<div id="outline-container-orgb33a144" class="outline-2">
+<h2 id="orgb33a144">Figures</h2>
+<div class="outline-text-2" id="text-orgb33a144">
 <p>
 LaTeX has the ability to generate figures from text. The most ubiquitous package
-to do this is pgf, otherwise known as <a href="http://cremeronline.com/LaTeX/minimaltikz.pdf">TikZ</a>(<a href="#citeproc_bib_item_6"><i>CTAN: Package Pgf</i>, n.d.</a>).
+to do this is pgf, otherwise known as <a href="http://cremeronline.com/LaTeX/minimaltikz.pdf">TikZ</a>(<a href="#citeproc_bib_item_7"><i>CTAN: Package Pgf</i>, n.d.</a>).
 </p>
 </div>
-<div id="outline-container-orgf89cd41" class="outline-3">
-<h3 id="orgf89cd41">Examples</h3>
-<div class="outline-text-3" id="text-orgf89cd41">
+<div id="outline-container-orgb652d08" class="outline-3">
+<h3 id="orgb652d08">Examples</h3>
+<div class="outline-text-3" id="text-orgb652d08">
 <blockquote>
 <p>
 Authors Note: These examples are taken from the linked TikZ manual. I have edited them
@@ -494,14 +505,14 @@ slightly to better fit this document.
 The simplest command in TikZ is <code>\draw</code>. It simply draws a line between points.
 </p>
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">tikzpicture</span>}
-<span style="color: #d3d3d3;">\draw</span> (0,0) -- (1,2) -- (2,3) -- (1,0);
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">tikzpicture</span>}
+<pre class="src src-latex"><span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">tikzpicture</span>}
+<span class="org-font-latex-sedate">\draw</span> (0,0) -- (1,2) -- (2,3) -- (1,0);
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">tikzpicture</span>}
 </pre>
 </div>
 
 
-<div id="org73577df" class="figure">
+<div id="orgbe14cda" class="figure">
 <p><img src="figure1.png" alt="figure1.png" width="300px" />
 </p>
 </div>
@@ -513,17 +524,17 @@ can take on different shapes, styles, and sizes.
 
 <div class="org-src-container">
 <pre class="src src-latex">
-<span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">tikzpicture</span>}
-<span style="color: #d3d3d3;">\draw</span> [&lt;-&gt;] (0,2) -- (0,0) -- (4,0);
-<span style="color: #d3d3d3;">\draw</span> [thick] (0,1.5) -- (3,0);
-<span style="color: #d3d3d3;">\draw</span> [ultra thick] (0,0) -- (2,2);
-<span style="color: #d3d3d3;">\draw</span> [help lines] (1,0) -- (1,1) -- (0,1);
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">tikzpicture</span>}
+<span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">tikzpicture</span>}
+<span class="org-font-latex-sedate">\draw</span> [&lt;-&gt;] (0,2) -- (0,0) -- (4,0);
+<span class="org-font-latex-sedate">\draw</span> [thick] (0,1.5) -- (3,0);
+<span class="org-font-latex-sedate">\draw</span> [ultra thick] (0,0) -- (2,2);
+<span class="org-font-latex-sedate">\draw</span> [help lines] (1,0) -- (1,1) -- (0,1);
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">tikzpicture</span>}
 </pre>
 </div>
 
 
-<div id="orga348ff8" class="figure">
+<div id="org9082f4f" class="figure">
 <p><img src="figure2.png" alt="figure2.png" width="300px" />
 </p>
 </div>
@@ -533,14 +544,14 @@ Most figures need labels, a fact which is handled by TikZ &ldquo;nodes&rdquo;.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #a7c080;">\begin</span>{<span style="color: #e69875;">tikzpicture</span>}
-<span style="color: #d3d3d3;">\draw</span> [thick, &lt;-&gt;] (0,2) -- (0,0) -- (2,0);
-<span style="color: #d3d3d3;">\node</span> at (1,2.5) {A simple label};
-<span style="color: #a7c080;">\end</span>{<span style="color: #e69875;">tikzpicture</span>}
+<pre class="src src-latex"><span class="org-font-latex-sedate"><span class="org-keyword">\begin</span></span>{<span class="org-function-name">tikzpicture</span>}
+<span class="org-font-latex-sedate">\draw</span> [thick, &lt;-&gt;] (0,2) -- (0,0) -- (2,0);
+<span class="org-font-latex-sedate">\node</span> at (1,2.5) {A simple label};
+<span class="org-font-latex-sedate"><span class="org-keyword">\end</span></span>{<span class="org-function-name">tikzpicture</span>}
 </pre>
 </div>
 
-<div id="orgf86ec19" class="figure">
+<div id="org064dd41" class="figure">
 <p><img src="figure3.png" alt="figure3.png" width="300px" />
 </p>
 </div>
@@ -552,61 +563,88 @@ recommended.
 </div>
 </div>
 </div>
-<div id="outline-container-org341852c" class="outline-2">
-<h2 id="org341852c">Extra Resources</h2>
-<div class="outline-text-2" id="text-org341852c">
+<div id="outline-container-org128a0c4" class="outline-2">
+<h2 id="org128a0c4">Automatic Bibliographies</h2>
+<div class="outline-text-2" id="text-org128a0c4">
 <p>
-These are extra resources for learning LaTeX, they are useful as references, but
-can be intimidating to new users.
+There are some facilities built in to LaTeX for bibliographies, but the standard
+is the package <a href="https://ctan.mirrors.hoobly.com/macros/latex/contrib/biblatex/doc/biblatex.pdf">BibLaTeX</a>(<a href="#citeproc_bib_item_5"><i>CTAN: Package BibLaTeX</i>, n.d.</a>). Citations are placed in a
+<code>.bib</code> file in &ldquo;bibTeX&rdquo; format. Here is an example (<code>sources.bib</code>):
+This file is then imported into a <code>.tex</code> file like so:
+</p>
+
+<div id="orgb0311c1" class="figure">
+<p><img src="citation.png" alt="citation.png" width="300px" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org48eece6" class="outline-2">
+<h2 id="org48eece6">Conclusion and Extra Resources</h2>
+<div class="outline-text-2" id="text-org48eece6">
+<p>
+LaTeX is a very complicated tool, but also an extremely useful one. The content
+in this document only covers a very small amount of possibilities that LaTeX
+provides. The following resources can be used to learn more about LaTeX and its uses:
 </p>
 <ul class="org-ul">
 <li><a href="https://www.ctan.org/">CTAN</a>, the comprehensive TeX archive network</li>
 <li><a href="https://www.overleaf.com/learn/latex/Tutorials">Overleaf Tutorials</a></li>
 <li><a href="https://latex-tutorial.com/tutorials/">LaTeX-Tutorial.com</a>, a great learning resource</li>
+<li><a href="https://www.latex-project.org/help/documentation/">Official LaTeX documentation</a></li>
 </ul>
+
+<blockquote>
+<p>
+Author&rsquo;s note: Some of these resources can be indimidating to new users, but are
+great as reference material.
+</p>
+</blockquote>
 </div>
 </div>
 
-<div id="outline-container-orge95ad55" class="outline-2">
-<h2 id="orge95ad55">References</h2>
-<div class="outline-text-2" id="text-orge95ad55">
+<div id="outline-container-orgd247d34" class="outline-2">
+<h2 id="orgd247d34">References</h2>
+<div class="outline-text-2" id="text-orgd247d34">
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a><i>APA Style</i>. (n.d.). Https://Apastyle.Apa.Org. Retrieved November 28, 2022, from <a href="https://apastyle.apa.org">https://apastyle.apa.org</a></div>
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a><i>Auto-LaTeX Equations - Google Workspace Marketplace</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://workspace.google.com/marketplace/app/autolatex_equations/850293439076">https://workspace.google.com/marketplace/app/autolatex_equations/850293439076</a></div>
   <div class="csl-entry"><a id="citeproc_bib_item_3"></a><i>CTAN: Package amsmath</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://ctan.org/pkg/amsmath?lang=en">https://ctan.org/pkg/amsmath?lang=en</a></div>
   <div class="csl-entry"><a id="citeproc_bib_item_4"></a><i>CTAN: Package apa7</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://ctan.org/pkg/apa7?lang=en">https://ctan.org/pkg/apa7?lang=en</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_5"></a><i>CTAN: Package latexmk</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://ctan.org/pkg/latexmk/?lang=en">https://ctan.org/pkg/latexmk/?lang=en</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_6"></a><i>CTAN: Package pgf</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://www.ctan.org/pkg/pgf">https://www.ctan.org/pkg/pgf</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_7"></a><i>CTAN: Package verse</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://ctan.org/pkg/verse?lang=en">https://ctan.org/pkg/verse?lang=en</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_8"></a>Foundation, B. (n.d.). blender.org - Home of the Blender project - Free and Open 3D Creation Software. <i>Blender.Org</i>. Retrieved November 11, 2022, from <a href="https://www.blender.org/">https://www.blender.org/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_9"></a><i>GitHub Copilot · Your AI pair programmer</i>. (n.d.). GitHub. Retrieved November 11, 2022, from <a href="https://github.com/features/copilot">https://github.com/features/copilot</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_10"></a><i>GNU Emacs - GNU Project</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_11"></a><i>Help:Formatting - MediaWiki</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://www.mediawiki.org/wiki/Help:Formatting">https://www.mediawiki.org/wiki/Help:Formatting</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_12"></a><i>HTML Standard</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://html.spec.whatwg.org/">https://html.spec.whatwg.org/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_13"></a><i>LaTeX - A document preparation system</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://www.latex-project.org/">https://www.latex-project.org/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_14"></a><i>LibreOffice - Free Office Suite</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://www.libreoffice.org/">https://www.libreoffice.org/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_15"></a><i>MacTeX - TeX Users Group</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://tug.org/mactex/index.html">https://tug.org/mactex/index.html</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_16"></a><i>Microsoft Word – Word Processing Software | Microsoft 365</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://www.microsoft.com/en-us/microsoft-365/word">https://www.microsoft.com/en-us/microsoft-365/word</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_17"></a><i>MikTex</i>. (2022). <a href="https://miktex.org/">https://miktex.org/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_18"></a><i>Online LaTeX Equation Editor - create, integrate, download</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://latex.codecogs.com/">https://latex.codecogs.com/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_19"></a><i>Overleaf, Online LaTeX Editor</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://www.overleaf.com">https://www.overleaf.com</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_20"></a><i>Shakespeare’s Sonnets, Sonnet 1 | The Folger SHAKESPEARE</i>. (2020, February 11). <a href="https://shakespeare.folger.edu/shakespeares-works/shakespeares-sonnets/sonnet-1/">https://shakespeare.folger.edu/shakespeares-works/shakespeares-sonnets/sonnet-1/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_21"></a><i>Strawberry Perl for Windows</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://strawberryperl.com/">https://strawberryperl.com/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_22"></a><i>Text Editor - Free App for Editing Text Files</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://texteditor.co/">https://texteditor.co/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_23"></a><i>Visual Studio Code - Code Editing. Redefined</i>. (n.d.--a). Retrieved November 28, 2022, from <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_24"></a><i>Visual Studio Code - Code Editing. Redefined</i>. (n.d.--b). Retrieved November 11, 2022, from <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_25"></a><i>welcome home : vim online</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://www.vim.org/">https://www.vim.org/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a><i>CTAN: Package BibLaTeX</i>. (n.d.). Retrieved December 1, 2022, from <a href="https://ctan.org/pkg/biblatex?lang=en">https://ctan.org/pkg/biblatex?lang=en</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a><i>CTAN: Package latexmk</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://ctan.org/pkg/latexmk/?lang=en">https://ctan.org/pkg/latexmk/?lang=en</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_7"></a><i>CTAN: Package pgf</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://www.ctan.org/pkg/pgf">https://www.ctan.org/pkg/pgf</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_8"></a><i>CTAN: Package verse</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://ctan.org/pkg/verse?lang=en">https://ctan.org/pkg/verse?lang=en</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_9"></a>Foundation, B. (n.d.). blender.org - Home of the Blender project - Free and Open 3D Creation Software. <i>Blender.Org</i>. Retrieved November 11, 2022, from <a href="https://www.blender.org/">https://www.blender.org/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_10"></a><i>GitHub Copilot · Your AI pair programmer</i>. (n.d.). GitHub. Retrieved November 11, 2022, from <a href="https://github.com/features/copilot">https://github.com/features/copilot</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_11"></a><i>GNU Emacs - GNU Project</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_12"></a><i>Help:Formatting - MediaWiki</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://www.mediawiki.org/wiki/Help:Formatting">https://www.mediawiki.org/wiki/Help:Formatting</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_13"></a><i>HTML Standard</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://html.spec.whatwg.org/">https://html.spec.whatwg.org/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_14"></a><i>LaTeX - A document preparation system</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://www.latex-project.org/">https://www.latex-project.org/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_15"></a><i>LibreOffice - Free Office Suite</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://www.libreoffice.org/">https://www.libreoffice.org/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_16"></a><i>MacTeX - TeX Users Group</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://tug.org/mactex/index.html">https://tug.org/mactex/index.html</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_17"></a><i>Microsoft Word – Word Processing Software | Microsoft 365</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://www.microsoft.com/en-us/microsoft-365/word">https://www.microsoft.com/en-us/microsoft-365/word</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_18"></a><i>MikTex</i>. (2022). <a href="https://miktex.org/">https://miktex.org/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_19"></a><i>Online LaTeX Equation Editor - create, integrate, download</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://latex.codecogs.com/">https://latex.codecogs.com/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_20"></a><i>Overleaf, Online LaTeX Editor</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://www.overleaf.com">https://www.overleaf.com</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_21"></a><i>Shakespeare’s Sonnets, Sonnet 1 | The Folger SHAKESPEARE</i>. (2020, February 11). <a href="https://shakespeare.folger.edu/shakespeares-works/shakespeares-sonnets/sonnet-1/">https://shakespeare.folger.edu/shakespeares-works/shakespeares-sonnets/sonnet-1/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_22"></a><i>Strawberry Perl for Windows</i>. (n.d.). Retrieved November 28, 2022, from <a href="https://strawberryperl.com/">https://strawberryperl.com/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_23"></a><i>Text Editor - Free App for Editing Text Files</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://texteditor.co/">https://texteditor.co/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_24"></a><i>Visual Studio Code - Code Editing. Redefined</i>. (n.d.--a). Retrieved November 28, 2022, from <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_25"></a><i>Visual Studio Code - Code Editing. Redefined</i>. (n.d.--b). Retrieved November 11, 2022, from <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_26"></a><i>welcome home : vim online</i>. (n.d.). Retrieved November 11, 2022, from <a href="https://www.vim.org/">https://www.vim.org/</a></div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org369af62" class="outline-2">
-<h2 id="org369af62">Glossary</h2>
-<div class="outline-text-2" id="text-org369af62">
+<div id="outline-container-orgc918c46" class="outline-2">
+<h2 id="orgc918c46">Glossary</h2>
+<div class="outline-text-2" id="text-orgc918c46">
 </div>
-<div id="outline-container-orgea6848c" class="outline-3">
-<h3 id="orgea6848c">Text Editor</h3>
-<div class="outline-text-3" id="text-orgea6848c">
+<div id="outline-container-org406682a" class="outline-3">
+<h3 id="org406682a">Text Editor</h3>
+<div class="outline-text-3" id="text-org406682a">
 <p>
 A text editor is a piece of software that facilitates the creation of plain text
 files (files that do not contain formatting information). Text editors are most
@@ -615,9 +653,9 @@ including HTML and LaTeX files.
 </p>
 </div>
 
-<div id="outline-container-org32e5934" class="outline-4">
-<h4 id="org32e5934">Common Features of a Text Editor</h4>
-<div class="outline-text-4" id="text-org32e5934">
+<div id="outline-container-org6a04d3a" class="outline-4">
+<h4 id="org6a04d3a">Common Features of a Text Editor</h4>
+<div class="outline-text-4" id="text-org6a04d3a">
 <p>
 While the definition of a text editor is simply a piece of software that creates
 text files, most text editors also contain extra features that make file
@@ -630,7 +668,7 @@ the color of specific characters so that the user has an easier time discerning
 the purpose of the text.
 </p>
 
-<div id="org456ebf3" class="figure">
+<div id="org0b2d490" class="figure">
 <p><img src="syntaxhighlighting.png" alt="syntaxhighlighting.png" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Notice how different pieces of text are highlighted differently? This makes it easier for the document creator to understand.</p>
@@ -642,11 +680,11 @@ will suggest new text based on what is typed. Depending on the implementation,
 auto-complete may suggest anything from simple words to complex definitions
 written in other files. Some implementations can even utilize artificial
 intelligence to make the completions smarter, as is the case with the popular
-Github Copilot tool (<a href="#citeproc_bib_item_9"><i>GitHub Copilot · Your AI Pair Programmer</i>, n.d.</a>).
+Github Copilot tool (<a href="#citeproc_bib_item_10"><i>GitHub Copilot · Your AI Pair Programmer</i>, n.d.</a>).
 </p>
 
 
-<div id="org160652f" class="figure">
+<div id="org77fe292" class="figure">
 <p><img src="autocomplete.png" alt="autocomplete.png" />
 </p>
 <p><span class="figure-number">Figure 2: </span>See how auto-complete suggests a function written earlier in the file? Auto-complete will often change the suggestions based on what has already been written.</p>
@@ -656,7 +694,7 @@ Github Copilot tool (<a href="#citeproc_bib_item_9"><i>GitHub Copilot · Your AI
 Text editors also commonly contain error checkers or <i>linters</i>; this is extremely useful in programming related scenarios because some errors can be hard to spot, even to the untrained eye. Linters can also aid in learning, as they often describe the problem in addition to pointing it out. Linters are not limited to just error, they can also show warnings and style recommendations.
 </p>
 
-<div id="orgb9133ad" class="figure">
+<div id="org5d36661" class="figure">
 <p><img src="linter.png" alt="linter.png" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Notice how errors and warnings are differentiated on the left.</p>
@@ -667,39 +705,39 @@ Some text editors contain many more features than described here,  anything from
 </p>
 </div>
 </div>
-<div id="outline-container-orgacc36d9" class="outline-4">
-<h4 id="orgacc36d9">Examples of Text Editors</h4>
-<div class="outline-text-4" id="text-orgacc36d9">
+<div id="outline-container-org163ec2f" class="outline-4">
+<h4 id="org163ec2f">Examples of Text Editors</h4>
+<div class="outline-text-4" id="text-org163ec2f">
 <p>
-Many basic text editors exist, the most famous of which is probably Microsoft&rsquo;s Notepad. This text editor does not contain any of the features previously described, aiming to be as bare-bones as possible. On the other end of the spectrum, integrated development environments (IDE) aim to pack as many features as possible regarding a specific programming language or tool. Overleaf (<a href="#citeproc_bib_item_19"><i>Overleaf, Online LaTeX Editor</i>, n.d.</a>) is an online based LaTeX IDE that makes document creation much more intuitive to non-technical audiences.
+Many basic text editors exist, the most famous of which is probably Microsoft&rsquo;s Notepad. This text editor does not contain any of the features previously described, aiming to be as bare-bones as possible. On the other end of the spectrum, integrated development environments (IDE) aim to pack as many features as possible regarding a specific programming language or tool. Overleaf (<a href="#citeproc_bib_item_20"><i>Overleaf, Online LaTeX Editor</i>, n.d.</a>) is an online based LaTeX IDE that makes document creation much more intuitive to non-technical audiences.
 </p>
 
 <p>
-Some text editors are extensible, meaning that software can be written by third parties to extend, or increase, functionality. Some popular editors in this category are Microsoft&rsquo;s Visual Studio Code (<a href="#citeproc_bib_item_24"><i>Visual Studio Code - Code Editing. Redefined</i>, n.d.--b</a>), GNU Emacs(<a href="#citeproc_bib_item_10"><i>GNU Emacs - GNU Project</i>, n.d.</a>), and Vim (<a href="#citeproc_bib_item_25"><i>Welcome Home : Vim Online</i>, n.d.</a>). These editors have potentially limitless amounts of features and can be modified to fit a variety of different use cases.
+Some text editors are extensible, meaning that software can be written by third parties to extend, or increase, functionality. Some popular editors in this category are Microsoft&rsquo;s Visual Studio Code (<a href="#citeproc_bib_item_25"><i>Visual Studio Code - Code Editing. Redefined</i>, n.d.--b</a>), GNU Emacs(<a href="#citeproc_bib_item_11"><i>GNU Emacs - GNU Project</i>, n.d.</a>), and Vim (<a href="#citeproc_bib_item_26"><i>Welcome Home : Vim Online</i>, n.d.</a>). These editors have potentially limitless amounts of features and can be modified to fit a variety of different use cases.
 </p>
 
 <p>
-Text editors are often built into other software as well. Blender (<a href="#citeproc_bib_item_8">Foundation, n.d.</a>), contains a editor for use with its built in Python (a programming language) interpreter. Many web based text editors also exist, such as the Text Editor (<a href="#citeproc_bib_item_22"><i>Text Editor - Free App for Editing Text Files</i>, n.d.</a>).
+Text editors are often built into other software as well. Blender (<a href="#citeproc_bib_item_9">Foundation, n.d.</a>), contains a editor for use with its built in Python (a programming language) interpreter. Many web based text editors also exist, such as the Text Editor (<a href="#citeproc_bib_item_23"><i>Text Editor - Free App for Editing Text Files</i>, n.d.</a>).
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdefea53" class="outline-4">
-<h4 id="orgdefea53">Conclusion</h4>
-<div class="outline-text-4" id="text-orgdefea53">
+<div id="outline-container-orgb44c56d" class="outline-4">
+<h4 id="orgb44c56d">Conclusion</h4>
+<div class="outline-text-4" id="text-orgb44c56d">
 <p>
 Many different text editors exist and support a variety of different features. Some are very basic, some are extensible, and others are simply pieces of other software. They all share the ability to edit plain text, and most contain at least some quality of life improvements for the user, such as syntax highlighting. They are required to write most programming and markup languages.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org140dfa5" class="outline-3">
-<h3 id="org140dfa5">LaTeX Environments</h3>
-<div class="outline-text-3" id="text-org140dfa5">
+<div id="outline-container-org6651b2e" class="outline-3">
+<h3 id="org6651b2e">LaTeX Environments</h3>
+<div class="outline-text-3" id="text-org6651b2e">
 <p>
 LaTeX environments provide a way to apply an effect to a region of text. The
 <code>verse</code> environment will format the text in a format commonly used for
-sonnets(<a href="#citeproc_bib_item_20"><i>Shakespeare’s Sonnets, Sonnet 1 | the Folger SHAKESPEARE</i>, 2020</a>).
+sonnets(<a href="#citeproc_bib_item_21"><i>Shakespeare’s Sonnets, Sonnet 1 | the Folger SHAKESPEARE</i>, 2020</a>).
 </p>
 
 <p>
@@ -713,19 +751,19 @@ For more information about environments, see the <a href="https://www.overleaf.c
 </p>
 </div>
 </div>
-<div id="outline-container-orga64533c" class="outline-3">
-<h3 id="orga64533c">Plain Text</h3>
-<div class="outline-text-3" id="text-orga64533c">
+<div id="outline-container-org889dee6" class="outline-3">
+<h3 id="org889dee6">Plain Text</h3>
+<div class="outline-text-3" id="text-org889dee6">
 <p>
 <a href="https://en.wikipedia.org/wiki/Plain_text">Plain text</a> is text without any formatting information. Plain text is edited in a
-<a href="#orgea6848c">text editor</a>. LaTeX is written in plain text.
+<a href="#org406682a">text editor</a>. LaTeX is written in plain text.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd900c75" class="outline-3">
-<h3 id="orgd900c75">Document Class</h3>
-<div class="outline-text-3" id="text-orgd900c75">
+<div id="outline-container-org3ba5b4c" class="outline-3">
+<h3 id="org3ba5b4c">Document Class</h3>
+<div class="outline-text-3" id="text-org3ba5b4c">
 <p>
 LaTeX documents commonly make use of &ldquo;document classes&rdquo;. These are a set of
 instructions that tells LaTeX how to format a document. Custom classes can be
@@ -758,7 +796,7 @@ complicated terms will either be defined, or an appropriate <a href="https://en.
 
 <div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
 A <a href="https://en.wikipedia.org/wiki/Text_editor">text editor</a> is a piece of software that edits plain text. See
-the extended definition <a href="#orgea6848c">here</a>.
+the extended definition <a href="#org406682a">here</a>.
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
@@ -776,7 +814,7 @@ often.
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: David Lewis</p>
-<p class="date">Created: 2022-11-29 Tue 09:14</p>
+<p class="date">Created: 2022-12-01 Thu 14:29</p>
 </div>
 </body>
 </html>
