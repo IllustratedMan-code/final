@@ -9,7 +9,7 @@
 #+latex_header: \usepackage{minted}
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="style.css">
 #+EXPORT_FILE_NAME: index.html
-* TODO Abstract
+* Abstract
 This document covers the installation process and basic use of the typesetting
 tool known as \(\LaTeX\).
 
