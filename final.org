@@ -17,8 +17,8 @@ tool known as \(\LaTeX\).
 LaTeX is a "document preparation system" [cite:@LaTeXDocumentPreparation]. It
 is a program that takes a /plain text/[fn:plain_text] file written in a special
 syntax and creates a document, commonly in the PDF format. Rather than display
-the formatting in the editor, a la Microsoft Word [cite:@MicrosoftWordWord], LaTeX uses a set of codes or
-"commands" to determine how the final document will look. Italicized text for
+the formatting in the editor, such as Microsoft Word [cite:@MicrosoftWordWord], LaTeX uses a set of codes or
+"commands" to determine how the final document will look. Italicized text, for
 example, would look =\emph{like this}= in the text file, but /like this/ in the
 final document. This document aims to provide a brief introduction in the use of
 LaTeX, covering everything from general syntax to document classes.
@@ -42,14 +42,14 @@ complicated terms will either be defined, or an appropriate [[https://en.wikiped
 [fn:basic_terminal]
 Basic terminal knowledge includes moving directories(=cd= command in Unix operating systems) and running commands.
 ** Uses
-In the case of Big Publishing CO., we use it for publishing. Authors submit
+In the case of Big Publishing Co., we use LaTeX for publishing. Authors submit
 their work in an arbitrary format, which might include handwritten equations,
 non-standardized fonts, etc. LaTeX provides a way to automate and standardize
 the formatting of these documents. It is also frequently used by document
 creators to export to multiple formats without extra work.
 
 * A Basic Example
-On first glance, LaTeX looks a bit like a [[https://en.wikipedia.org/wiki/Programming_language][programming language]]. For the most
+On first glance, LaTeX looks a bit like a [[https://en.wikipedia.org/wiki/Programming_language][programming language]]. But, for the most
 part, LaTeX would *not* be considered a programming language. It is more like
 HTML [cite:@HTMLStandard] or MediaWiki markup [cite:@HelpFormattingMediaWiki].
 These languages are generally considered [[https://en.wikipedia.org/wiki/Markup_language][Markup languages]]. Markup languages are
@@ -86,32 +86,32 @@ the LaTeX /program/ for every major platform.
 One of the easiest methods to get
 started is to use [[https://www.overleaf.com/][Overleaf]] [cite:@OverleafOnlineLaTeX]. Overleaf is an online
 system that removes much of the hassle of creating documents in LaTeX.
-Overleaf's online naturre For
+Overleaf's online nature makes it cross-platform. For
 professional use, Overleaf is not recommended as data privacy is not assured.
-This is a problem with all external web based tools. It
-is great as a learning tool and for personal use however.
+This is a problem with all external web based tools. However, it
+is great as a learning tool and for personal use.
 *** Windows
-The official recommended  way to install LaTeX in Windows is to use the MiKTeX
+The official recommended  way to install LaTeX in Windows is to use the MikTeX
 [cite:@MikTex2022] distribution. Follow the [[https://miktex.org/howto/install-miktex][official instructions]] to install. Make
 sure the correct [[https://miktex.org/kb/prerequisites-2-9][version of Windows]] is installed. Once installed, the program
 [[https://strawberryperl.com/][Straberry Perl]] [cite:@StrawberryPerlWindows] must be installed. Assuming that
 VScode is installed, the [[https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop][LaTeX Workshop]] extension must be installed through the
-built in marketplace. LaTeX can now be run through VScode if so desired.
+built-in marketplace. LaTeX can now be run through VScode if so desired.
 *** MacOS
 The official recommended way to install LaTeX in MacOS is to use the [[https://tug.org/mactex/index.html][MacTeX]]
-distribution[cite:@MacTeXTeXUsers]. Follow the
+distribution [cite:@MacTeXTeXUsers]. Follow the
 [[https://tug.org/mactex/mactex-download.html][official instructions]] to install. Assuming that VScode is installed, the [[https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop][LaTeX
-Workshop]] extension must be installed through the built in marketplace. LaTeX
+Workshop]] extension must be installed through the built-in marketplace. LaTeX
 can now be run through VScode if so desired.
 *** Linux (Ubuntu)
-For Ubuntu linux, simply running:
+For Ubuntu Linux, simply running the following will install the required packages:
 #+begin_src bash
 sudo apt update
 sudo apt install texlive-full
 sudo apt install latexmk
 #+end_src
-will install the required packages. Assuming that VScode is installed, the [[https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop][LaTeX
-Workshop]] extension must be installed through the built in marketplace. LaTeX
+Assuming that VScode is installed, the [[https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop][LaTeX
+Workshop]] extension must be installed through the built-in marketplace. LaTeX
 can now be run through VScode if so desired.
 ** First Document
 Copy the code from [[A Basic Example][above]] into a file called =mydocument.tex= using a text editor.
@@ -135,10 +135,10 @@ Taking our basic example again:
 Hello, World! I just wrote my first \LaTeX{} document!
 \end{document}
 #+end_src
-LaTeX uses the =\= character to demarcate /Commands/[fn:latex_commands] from the
+LaTeX uses the =\= character to demarcate /commands/[fn:latex_commands] from the
 rest of the text. ={}= characters are used to provide arguments to these commands.
 
-The =\begin= and =\end= commands are special, they define an
+The =\begin= and =\end= commands are special: they define an
 /[[LaTeX Environments][environment]]/. There are many different kinds of environment, but all documents
 should contain a =document= environment. The text before the =document= environment
 forms the "header" of the document. This is where important meta information,
@@ -192,7 +192,7 @@ To eat the world’s due, by the grave and thee. \\
 [[file:complicated_example.png]]
 
 This example showcases common environments and how they are used. It also shows
-the use of a package, =verse=. Packages provide commands and environments for a
+the use of a package called =verse=. Packages provide commands and environments for a
 specific purpose. If installed correctly, all packages for LaTeX should already
 be installed.
 
@@ -202,10 +202,10 @@ relating to poetry are documented by the [[https://ctan.math.washington.edu/tex-
 
 * Math Equations
 
-LaTeX is particularly useful for creating math equations.Many other pieces of
+LaTeX is particularly useful for creating math equations. Many other pieces of
 software have implemented an editor just for the math functionality of
 LaTeX.Examples include Microsoft Word, [[https://www.libreoffice.org/][Libreoffice]][cite:@LibreOfficeFreeOffice] and even an [[https://workspace.google.com/marketplace/app/autolatex_equations/850293439076][addon]] for the
-Google office suite[cite:@AutoLaTeXEquationsGoogle].
+Google office suite [cite:@AutoLaTeXEquationsGoogle].
 
 ** Interactive editor {{{html}}}
 Feel free to try any of the example math equations in this editor courtesy of [[https://latex.codecogs.com/][codecogs]][cite:@OnlineLaTeXEquation].
@@ -235,7 +235,7 @@ There are a lot of new commands here, but note that they can only be used in a
 math environment. If math in normal text is desired, one can use the =\( \)=
 commands. This works like so: =\(\frac{5}{3}\)= -> \(\frac{5}{3}\).
 
-Using the [[https://ctan.org/pkg/amsmath?lang=en][amsmath]] package[cite:@CTANPackageAmsmath] provides different matrix
+Using the [[https://ctan.org/pkg/amsmath?lang=en][amsmath]] package [cite:@CTANPackageAmsmath] provides different matrix
 environments that can be used like so:
 #+begin_src latex :file equation_2.png :eval never-export :exports code
 \begin{equation*}
@@ -268,8 +268,8 @@ a & b & c
 a & b & c
 \end{bmatrix}
 \end{equation*}
-Notice how the equation environment has an =*=? This removes the Number annotation
-on the equation. For more information about Mathematical expressions, please
+Notice how the equation environment has an =*=? This removes the number annotation
+on the equation. For more information about mathematical expressions, please
 refer to the [[https://www.overleaf.com/learn/latex/Mathematical_expressions][Overleaf documentation]]. There is also this [[file:symbols.pdf][excellent reference]] from [[https://cmor.rice.edu/][Rice
 University]].
 
@@ -407,7 +407,7 @@ Github Copilot tool [cite:@GitHubCopilotYour].
 #+CAPTION: See how auto-complete suggests a function written earlier in the file? Auto-complete will often change the suggestions based on what has already been written.
 [[file:autocomplete.png]]
 
-Text editors also commonly contain error checkers or /linters/; this is extremely useful in programming related scenarios because some errors can be hard to spot, even to the untrained eye. Linters can also aid in learning, as they often describe the problem in addition to pointing it out. Linters are not limited to just error, they can also show warnings and style recommendations.
+Text editors also commonly contain error checkers, or /linters/; this is extremely useful in programming-related scenarios because some errors can be hard to spot, even to the untrained eye. Linters can also aid in learning, as they often describe the problem in addition to pointing it out. Linters are not limited to just errors, they can also show warnings and style recommendations.
 #+CAPTION: Notice how errors and warnings are differentiated on the left.
 [[file:linter.png]]
 
@@ -415,20 +415,20 @@ Some text editors contain many more features than described here,  anything from
 *** Examples of Text Editors
 Many basic text editors exist, the most famous of which is probably Microsoft's Notepad. This text editor does not contain any of the features previously described, aiming to be as bare-bones as possible. On the other end of the spectrum, integrated development environments (IDE) aim to pack as many features as possible regarding a specific programming language or tool. Overleaf [cite:@OverleafOnlineLaTeX] is an online based LaTeX IDE that makes document creation much more intuitive to non-technical audiences.
 
-Some text editors are extensible, meaning that software can be written by third parties to extend, or increase, functionality. Some popular editors in this category are Microsoft's Visual Studio Code [cite:@VisualStudioCode], GNU Emacs[cite:@GNUEmacsGNU], and Vim [cite:@WelcomeHomeVim]. These editors have potentially limitless amounts of features and can be modified to fit a variety of different use cases.
+Some text editors are extensible, meaning that software can be written by third parties to extend, or increase, functionality. Some popular editors in this category are Microsoft's Visual Studio Code [cite:@VisualStudioCode], GNU Emacs [cite:@GNUEmacsGNU], and Vim [cite:@WelcomeHomeVim]. These editors have potentially limitless amounts of features and can be modified to fit a variety of different use cases.
 
-Text editors are often built into other software as well. Blender [cite:@foundationBlenderOrgHome], contains a editor for use with its built in Python (a programming language) interpreter. Many web based text editors also exist, such as the Text Editor [cite:@TextEditorFree].
+Text editors are often built into other software as well. Blender [cite:@foundationBlenderOrgHome], contains a editor for use with its built-in Python (a programming language) interpreter. Many web based text editors also exist, such as the Text Editor [cite:@TextEditorFree].
 
 *** Conclusion
 Many different text editors exist and support a variety of different features. Some are very basic, some are extensible, and others are simply pieces of other software. They all share the ability to edit plain text, and most contain at least some quality of life improvements for the user, such as syntax highlighting. They are required to write most programming and markup languages.
 ** LaTeX Environments
 LaTeX environments provide a way to apply an effect to a region of text. The
 =verse= environment will format the text in a format commonly used for
-sonnets[cite:@ShakespeareSonnetsSonnet2020].
+sonnets [cite:@ShakespeareSonnetsSonnet2020].
 
 Every document contains a =document= environment. This environment tells LaTeX how
 to differentiate between header information, such as document margins, and the
-document body, the actual written content.
+document body (the actual written content).
 
 For more information about environments, see the [[https://www.overleaf.com/learn/latex/Environments][Overleaf documentation]].
 ** Plain Text
@@ -441,8 +441,8 @@ instructions that tells LaTeX how to format a document. Custom classes can be
 created and distributed to provide a standardized format.
 
 An example of a commonly used third party document class would be
-[[https://mirror.mwt.me/ctan/macros/latex/contrib/apa7/apa7.pdf][apa7]][cite:@CTANPackageApa7].This class will
+[[https://mirror.mwt.me/ctan/macros/latex/contrib/apa7/apa7.pdf][apa7]][cite:@CTANPackageApa7]. This class will
 automatically format all the content of a =.tex= file to fit 7th edition APA style
 [cite:@APAStyle]. apa7 comes with options to customize the document
 as well, allowing the user to select the document type (journal, paper
-submission, etc) and customize to their liking.
+submission, etc) and customize it to their liking.
